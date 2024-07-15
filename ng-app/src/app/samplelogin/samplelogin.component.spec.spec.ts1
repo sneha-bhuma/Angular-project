@@ -1,0 +1,23 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { SampleloginComponent } from './samplelogin.component';
+
+describe('SampleloginComponent', () => {
+  let component: SampleloginComponent;
+  let fixture: ComponentFixture<SampleloginComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [SampleloginComponent]
+    })
+    .compileComponents();
+    
+    fixture = TestBed.createComponent(SampleloginComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

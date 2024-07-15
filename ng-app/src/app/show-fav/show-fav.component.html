@@ -1,0 +1,23 @@
+<div class="row row-cols-1 row-cols-md-3 g-4" >
+  <div class="row" *ngFor="let emp of favs">
+    <div class="card h-100" style="width: 200px">
+      <img src="{{ emp.image }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ emp.name }}</h5>
+        <p class="card-text">An employee of UST Global at Hyderabad</p>
+        <p class="card-text">Salary: {{emp.salary | currency : "INR" : "symbol"}}</p>
+        <button (click)="delFav(del)" type="submit"><mat-icon  
+          aria-hidden="false"
+          aria-label="Example delete icon"
+          fontIcon="delete"
+          style="font-size: 30px;">
+        </mat-icon></button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+<br />
+<p> Total Salary of favorites:  <input type=text value={{totalSalary}} /></p>
+

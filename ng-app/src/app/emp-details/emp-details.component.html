@@ -1,0 +1,23 @@
+<div class="card" *ngIf = "edet" style="width: 200px">
+    <img class="card-img-top"
+    [src]="edet.image"
+    [width]="200"
+    [height]="200"
+    alt="Card image"
+  />
+    <div class="card-body">
+        <h3 class = "card-title">{{edet.name}}</h3>
+          <p class="card-text">An employee of UST Global at Hyderabad</p>
+          <p class="card-text">
+            Salary: {{ edet.salary | currency : "INR" : "symbol" }}
+          </p>
+         
+        </div>
+
+    <!-- <app-emps-details [edet]="edet"></app-emps-details> -->
+    <br />
+    <button 
+          type="button"
+          (click)="addFav(edet)"
+          class="btn btn-lg btn-success"> Add Fav</button>
+</div>

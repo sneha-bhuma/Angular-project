@@ -1,0 +1,43 @@
+<div  class="table table-striped table-success">
+    <table >
+        <tr>
+            <th>Author</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>publishedAt</th>
+            <th>Image</th>
+        </tr>
+        <tr *ngFor="let each of news">
+            <td>{{each.author}}</td>
+            <td>{{each.title}}</td>
+            <td>{{each.description}}</td>
+            <td>{{each.publishedAt | date:'short' }}</td>
+            <td><img [src]="each.urlToImage" [width]="100"
+                [height]="100" alt="no image"/></td>
+    
+        </tr>
+    </table>
+</div>
+
+<div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+     
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="..." class="d-block w-100" alt="...">
+      </div>
+      
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+    
